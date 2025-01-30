@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+
+    <div class="card">
+      <h1>Percentage Calculator</h1>
+
+      <div class="percentage-container">
+        <label for="percentageSlider" id="percentageLabelSlider"
+          >Select Percentage</label
+        >
+
+        <input
+          type="range"
+          id="percentageSlider"
+          min="0"
+          max="100"
+          value="50"
+          step="1"
+        />
+
+        <div class="percentageValueDisplay">
+        <span id="percentageValue">50%</span>
+
+        </div>
+
+
+        <div>
+          <input type="number" id="baseNumber" pattern="Enter base Number" />
+          
+        </div>
+
+
+        <button onclick="calculatePercentage()">Calculate</button>
+
+        <div id="result"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

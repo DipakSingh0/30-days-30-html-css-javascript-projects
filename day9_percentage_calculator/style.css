@@ -1,0 +1,143 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.5s ease;
+  background: linear-gradient(to right, #e555e0, #499950);
+}
+
+body:hover {
+  /* background: linear-gradient(to right, #e555e0, #499950); */
+  background: linear-gradient(to left, #e555e0, #499950);
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 40px;
+
+  max-width: 500px;
+  width: 80%;
+  text-align: center;
+  background: linear-gradient(to right, #e555e0, #499950);
+}
+.card:hover {
+  transform: 1s;
+  background: linear-gradient(to left, #e555e0, #499950);
+}
+/*
+.card:active {
+  transform: scale(0.999); 
+  filter: brightness(0.98); 
+  background: linear-gradient(to right, #e555e0, #499950);
+}
+*/
+
+.percentage-container {
+  margin-bottom: 20px;
+}
+/* .percentage-container:hover{
+     background: linear-gradient(to right, #e555e0, #499950);
+} */
+
+h1 {
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 40px;
+   transition: transform 0.5s ease; 
+}
+
+h1:hover {
+  cursor: pointer;
+  color: white; /* Changed to white */
+}
+h1:flipped { 
+  transform: rotateY(180deg); /* Rotate 180 degrees on the Y-axis */
+}
+
+input {
+  margin-bottom: 40px;
+  width: calc(100% - 20%);
+  height: 30px;
+  border-radius: 100px;
+  /* align-items: center;
+    justify-content: center; */
+
+  margin-top: 10px;
+  appearance: none;
+  border: 5px solid honeydew;
+  background-color: aqua;
+  background: linear-gradient(to right, #ff69b4, #4caf50);
+  outline: none;
+  padding: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}
+input:hover {
+  background: linear-gradient(to right, #4caf50, #ff69b4);
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 45px;
+  height: 45px;
+  border: 2px solid honeydew;
+  border-radius: 50%;
+  background: #999f50;
+  cursor: pointer;
+}
+
+#percentageLabelSlider {
+  color: black;
+}
+#percentageLabelSlider:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#percentageValue {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+#percentageValue:hover {
+  cursor: pointer;
+  color: white;
+  /* background: linear-gradient(to right, #4caf50 , #ff69b4); */
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  background: linear-gradient(to right, #e555e0, #499950);
+}
+button:hover {
+  background: linear-gradient(to left, #e555e0, #499950);
+}
+button:active {
+  transform: scale(0.95); /* Slightly scale down */
+  filter: brightness(0.9); /* Slightly darken */
+  background: linear-gradient(to right, #e555e0, #499950);
+}
