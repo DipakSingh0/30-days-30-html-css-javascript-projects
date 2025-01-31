@@ -1,13 +1,16 @@
 //---------On Page Scripts----------//
 <script type="text/javascript">---</script>;
 
+
 //---------functions----------//
 function addNumbers(a, b) {
   return a + b;
 }
 
+
 //---------inline function or Arrow function----------//
 const addNumbers1 = (x, y) => x + y;
+
 
 //---------Logging Print----------//
 console.log("Hello World");
@@ -15,6 +18,7 @@ document.write("Hello World");
 alert("hello world");
 confirm("Are You Sure?");
 prompt("Tell Me Your Age ?");
+
 
 //---------JS - 8 data types----------//
 var age = 18;                                  // 1 --number
@@ -26,6 +30,7 @@ var a; typeof a;                               // 6 --undefined
 var a = null;                                  // 7 --value null
 const bigNumber = 123456789012345678901230n;   // 8 --bigInt due to n suffix
 
+
 //---------if else statement----------//
 if (age >= 18 && age <= 65) {
   console.log("You are eligible to vote");
@@ -33,12 +38,14 @@ if (age >= 18 && age <= 65) {
   console.log("You are not eligible to vote");
 }
 
+
 //---------while statement----------//
 var i = 0 ;                        // -- initialize variable with a value
 while (i<5){
     console.log(i," ");            // -- print the value of i to console
     i++;                           // -- increment the value of i by 1
 }
+
 
 //---------do while statement----------//
 i = 0;
@@ -51,6 +58,7 @@ do{
 for (var i = 0 ; i < 5 ; i++ ){
     console.log(i," ");
 }
+
 
 //----------for in loop -------------//
 /*
@@ -66,11 +74,10 @@ for ( let key in person ) {
     console.log(key , person[key]);  // -- output name - Dipak , age - 22 , place - mnr 
 }
 
+
 //----------for of loop -------------//
-/*
-- used to iterate over objects (arrays , strings , sets , maps , etc)
-- preferred way to loop over arrays.
-*/
+/* - used to iterate over objects (arrays , strings , sets , maps , etc)
+   - preferred way to loop over arrays. */
 const names = ["Dipak","Neeru","Axel"]; //-- arrays
 for (let x of names) {
     console.log(x);               // -- output Dipak , Neeru , Axel
@@ -80,6 +87,7 @@ const message = "Hello";          // -- characters
 for (let char of message) {
   console.log(char);
 }
+
 
 //----------Javascript Objects-------------//
 const user = { name: "Dipak", age: 22, city: "Mnr" };
@@ -116,6 +124,8 @@ const str = "hello";
 console.log(str[10]);        // Output: undefined
 console.log(str.charAt(10)); // Output: "" (empty string)
 
+
+
 //----------Javascript Maths-------------//
 var pi = Math.PI;  // 3.141592653589793
 Math.round(4.4);  //  4-rounded
@@ -150,11 +160,14 @@ parseInt("Months"); // NaN-because it can't be converted to a number
 /*
 NaN stands for Not A Number
 */
+
 parseFloat("3.5 days"); // returns 3.5 the first number float
 Number.MAX_VALUE   // largest possible JS number
 Number.MIN_VALUE   // smallest possible JS number
 Number.NEGATIVE_INFINITY  // negative infinity
 Number.POSITIVE_INFINITY   // positive infinity
+
+
 
 //----------Javascript Arrays-------------//
 const myArray = [1 , 2, 3 , 4 , 5];
@@ -167,8 +180,8 @@ myArray.reverse(); // [5, 4, 3, 2, 1] -- reverse the array
 myArray.sort();    // [1, 2, 3, 4, 5] -- sorts the array in ascending order
 myArray.join("-"); // "1-2-3-4-5" -- join the array with a string
 
-// Array iteration methods (important!):
 
+// Array iteration methods (important!):
 const newArray = [1, 2, 3, 4, 5];
 const doubledArray = newArray.map((element) => element * 2);
 
@@ -222,6 +235,8 @@ console.log("Found element (greater than 3):", foundElement); // Output: 2 i.e. 
 const foundIndex = Array1.findIndex((element) => element > 3);
 console.log("Index of found element (greater than 3):", foundIndex);  // Output: 3 
 
+
+
 // 9. filter(): Creates a new array containing all elements of the calling array which pass the test implemented by the provided function.
 const filteredArray = Array1.filter((element) => element > 5);
 console.log("Filtered array (greater than 5):", filteredArray); // Output: [] (empty array in this case)
@@ -236,6 +251,8 @@ console.log("All elements greater than 0:", allGreaterThan0); // Output: true
 // 12. some(): Tests whether *at least one* element in the array passes the test implemented by the provided function. Returns true or false.
 const someGreaterThan10 = Array1.some((element) => element > 10);
 console.log("Some elements greater than 10:", someGreaterThan10); // Output: false
+
+
 
 // 13. reduce(): Applies a function against an accumulator and each element of the array (from left to right) to reduce it to a single value.
 const sum = Array1.reduce((accumulator, currentValue) => accumulator + currentValue, 0); // 0 is the initial value of the accumulator
@@ -256,6 +273,8 @@ console.log("Array from string:", arrayFromStr); // Output: ['h', 'e', 'l', 'l',
 const isArray = Array1.isArray(Array1);
 console.log("Is myArray an array?", isArray); // Output: true
 
+
+
 // 17. of(): Creates a new Array instance from a variable number of arguments, regardless of number or type of arguments.
 const newArray1 = Array1.of(1, 2, "hello", true);
 console.log("New Array:", Array1); // Output: [1, 2, "hello", true]
@@ -268,11 +287,21 @@ console.log("myArray after fill:", Array1); // Output: [1, 10, 0, 0, 5]
 Array1.copyWithin(0, 3, 5); // Copies elements from index 3 up to (not including) 5 to index 0.
 console.log("myArray after copyWithin:", Array1); // Output: [0, 0, 0, 0, 5]
 
-//----------Javascript Set and Map Operations-------------//
 
+
+//----------Javascript Set and Map Operations-------------//
 // Set (Unique values)
 const uniqueValues = new Set([1, 2, 3, 2, 1]);
 console.log(uniqueValues); // Output: Set { 1, 2, 3 }
+
+
+//----------Javascript Date Methods  -------------//
+const now = new Date();
+console.log(now.toDateString()); // Output: Current full date in readable format
+console.log(now.getFullYear());  // Output: Current year only
+console.log(now.getMonth());     // Output: Month (0-based index)
+console.log(now.getDay());       // Output: Day of the week (0 for Sunday)
+
 
 // Map (Key-Value pairs)
 const mapExample = new Map();
@@ -292,6 +321,7 @@ try {
 } finally {
   console.log("This block will alway execute no matter what");
 }
+
 
 //-----------Destructuring Assignment------------//
 const human = { name: "Dipak", age: 22, city: "Mnr" };
@@ -329,22 +359,15 @@ const fetchData = () => {
 };
 fetchData().then((response) => console.log(response));
 
+
 //----------Javascript Async/Await-------------//
 async function fetchData() {
   try {
-    let result = await new Promise((resolve) =>
-      setTimeout(() => resolve("Async Data"), 1000)
-    );
+    const response = await fetchData();
+      console.log(response);
     console.log(result);
   } catch (error) {
-    console.error("Error:", error);
+      console.error("Error:", error);
   }
 }
 fetchData();
-
-//----------Javascript Date Methods  -------------//
-const now = new Date();
-console.log(now.toDateString()); // Output: Current full date in readable format
-console.log(now.getFullYear());  // Output: Current year only
-console.log(now.getMonth());     // Output: Month (0-based index)
-console.log(now.getDay());       // Output: Day of the week (0 for Sunday)
